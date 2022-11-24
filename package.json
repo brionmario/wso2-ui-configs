@@ -1,15 +1,27 @@
 {
-  "name": "ui-tooling",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "@wso2/ui-configs-workspace",
+  "version": "0.1.0",
+  "description": "Shareable configurations to maintain consistency across WSO2 UI code bases.",
+  "keywords": [
+    "eslint",
+    "stylelint",
+    "prettier"
+  ],
+  "homepage": "https://tooling.wso2.com",
+  "bugs": {
+    "url": "https://github.com/wso2/ui-configs/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "WSO2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wso2/ui-configs"
+  },
   "scripts": {},
-  "private": true,
   "dependencies": {},
   "devDependencies": {
     "nx": "15.2.1",
     "prettier": "^2.6.2"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "private": true
 }

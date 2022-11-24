@@ -1,6 +1,6 @@
-# Contributing to Oxygen
+# Contributing to WSO2 UI Configs
 
-We would love for you to contribute to Oxygen and help make it even better than it is today!
+We would love for you to contribute to WSO2 UI Configs and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
  - [Code of Conduct](#coc)
@@ -159,7 +159,7 @@ The content of the commit message body should contain:
 Please sign our Contributor License Agreement (CLA) before sending pull requests. For any code
 changes to be accepted, the CLA must be signed. It's a quick process, we promise!
 
-* Sign here -> [CLA form](https://cla-assistant.io/wso2/oxygen).
+* Sign here -> [CLA form](https://cla-assistant.io/wso2/ui-configs).
 
 If you have more than one GitHub accounts, or multiple email addresses associated with a single GitHub account, you must sign the CLA using the primary email address of the GitHub account used to author Git commits and send pull requests.
 
