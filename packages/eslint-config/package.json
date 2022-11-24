@@ -1,11 +1,11 @@
 {
   "name": "@wso2/eslint-config",
   "version": "0.1.0",
-  "description": "Shareable configurations to maintain consistency across WSO2 UI code bases.",
+  "description": "Shareable ESLint configuration used in WSO2 code bases.",
   "keywords": [
     "eslint",
-    "stylelint",
-    "prettier"
+    "shareable-config",
+    "frontend-tooling"
   ],
   "homepage": "https://tooling.wso2.com",
   "bugs": {
@@ -20,16 +20,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wso2/ui-configs"
+    "url": "https://github.com/wso2/ui-configs",
+    "directory": "packages/eslint-config"
   },
   "scripts": {},
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.20.2",
     "@babel/eslint-parser": "^7.19.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.44.0",
-    "eslint": "^8.28.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -51,6 +51,5 @@
   },
   "engines": {
     "node": ">=14.0.0"
-  },
-  "private": true
+  }
 }

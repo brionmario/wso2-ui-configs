@@ -23,5 +23,8 @@
     "nx": "15.2.1",
     "prettier": "^2.6.2"
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "private": true
 }
