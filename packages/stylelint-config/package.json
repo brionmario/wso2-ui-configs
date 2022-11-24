@@ -1,0 +1,38 @@
+{
+  "name": "@wso2/stylelint-config",
+  "version": "0.1.0",
+  "description": "Shareable Stylelint configuration used in WSO2 code bases.",
+  "keywords": [
+    "stylelint",
+    "shareable-config",
+    "frontend-tooling"
+  ],
+  "homepage": "https://tooling.wso2.com",
+  "bugs": {
+    "url": "https://github.com/wso2/ui-configs/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "WSO2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wso2/ui-configs",
+    "directory": "packages/stylelint-config"
+  },
+  "scripts": {},
+  "peerDependencies": {
+    "stylelint": ">=14.0.0",
+    "typescript": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
+}
