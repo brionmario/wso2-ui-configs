@@ -1,0 +1,56 @@
+{
+  "name": "@wso2/eslint-config",
+  "version": "0.1.0",
+  "description": "Shareable configurations to maintain consistency across WSO2 UI code bases.",
+  "keywords": [
+    "eslint",
+    "stylelint",
+    "prettier"
+  ],
+  "homepage": "https://tooling.wso2.com",
+  "bugs": {
+    "url": "https://github.com/wso2/ui-configs/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "WSO2",
+  "files": [
+    "base.js",
+    "index.js",
+    "jest.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wso2/ui-configs"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^5.9.1",
+    "eslint-plugin-tsdoc": "^0.2.16"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "typescript": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true
+}
