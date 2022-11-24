@@ -23,8 +23,11 @@
  */
 
 module.exports = {
-  extends: [require.resolve('./base')],
-  plugins: ['airbnb', 'airbnb-typescript'],
+  extends: [
+    require.resolve('./base'),
+    'airbnb',
+    'airbnb-typescript'
+  ],
   overrides: [
     {
       files: ['**/*.ts?(x)'],

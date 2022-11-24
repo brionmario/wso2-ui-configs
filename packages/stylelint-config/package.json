@@ -33,6 +33,10 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
+    "postcss-scss": "^4.0.5",
     "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "devDependencies": {
+    "stylelint": "^14.15.0"
   }
 }

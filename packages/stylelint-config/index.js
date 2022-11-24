@@ -26,5 +26,5 @@
   extends: [
     'stylelint-config-standard'
   ],
-  ignoreFiles: ['**/*.js', '**/*.cjs']
+  customSyntax: require('postcss-scss'),
 };
