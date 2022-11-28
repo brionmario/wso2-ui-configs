@@ -17,7 +17,8 @@
     "base.js",
     "index.js",
     "jest.js",
-    "recommended.js"
+    "recommended.js",
+    "strict.js"
   ],
   "repository": {
     "type": "git",
