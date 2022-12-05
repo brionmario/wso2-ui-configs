@@ -17,6 +17,11 @@
     "type": "git",
     "url": "https://github.com/wso2/ui-configs"
   },
+  "exports": {
+    "@wso2/eslint-config": "./packages/eslint-config",
+    "@wso2/prettier-config": "./packages/prettier-config",
+    "@wso2/stylelint-config": "./packages/stylelint-config"
+  },
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
