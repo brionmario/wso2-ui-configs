@@ -29,8 +29,8 @@ const path = require('path');
 const tsConfig = fs.existsSync('tsconfig.json')
   ? path.resolve('tsconfig.json')
   : fs.existsSync('types/tsconfig.json')
-    ? path.resolve('types/tsconfig.json')
-    : undefined;
+  ? path.resolve('types/tsconfig.json')
+  : undefined;
 
 module.exports = {
   extends: [require.resolve('./base'), 'airbnb'],
@@ -65,6 +65,10 @@ module.exports = {
         ],
       },
     ],
+    // Bit harsh rule, some developers will like to have consistent exports in a module.
+    // If there are a mixture of export types, the imports will look ugly.
+    // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md
+    'import/prefer-default-export': 'off',
     // Enforces sorting object properties in alphabetical order for readability.
     // https://eslint.org/docs/latest/rules/sort-keys
     'sort-keys': [
@@ -92,7 +96,8 @@ module.exports = {
       // If adding a typescript-eslint version of an existing ESLint rule,
       // make sure to disable the ESLint rule here.
       rules: {
-        "react/default-props-match-prop-types": 'off'
+        'react/default-props-match-prop-types': 'off',
+        'react/require-default-props': 'off',
       },
     },
   ],
