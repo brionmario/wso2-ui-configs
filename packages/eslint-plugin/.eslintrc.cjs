@@ -7,6 +7,8 @@ module.exports = {
     'plugin:eslint-plugin/recommended',
     'plugin:node/recommended',
     require.resolve('./lib/configs/javascript'),
+    require.resolve('./lib/configs/internal'),
+    require.resolve('./lib/configs/prettier'),
   ],
   overrides: [
     {

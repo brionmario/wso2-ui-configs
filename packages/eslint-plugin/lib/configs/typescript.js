@@ -16,8 +16,6 @@
  * under the License.
  */
 
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 
@@ -25,33 +23,40 @@ const path = require('path');
  * @fileoverview Entry point for the ESLint config.
  */
 
-// Try to resolve a `tsconfig.json` file to avoid asking the user to provide one.
-const tsConfig = fs.existsSync('tsconfig.json')
-  ? path.resolve('tsconfig.json')
-  : fs.existsSync('types/tsconfig.json')
-    ? path.resolve('types/tsconfig.json')
-    : undefined;
+/**
+ * Try to resolve a `tsconfig.json` file to avoid asking the user to provide one.
+ */
+const resolveTSConfig = () => {
+  if (fs.existsSync('tsconfig.json')) {
+    return path.resolve('tsconfig.json');
+  }
+
+  if (fs.existsSync('types/tsconfig.json')) {
+    return path.resolve('types/tsconfig.json');
+  }
+
+  return undefined;
+};
 
 module.exports = {
   extends: ['plugin:@wso2/javascript'],
-  rules: {},
   overrides: [
     {
-      files: ['**/*.ts?(x)'],
       extends: ['airbnb-typescript/base', 'plugin:typescript-sort-keys/recommended'],
+      files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        project: tsConfig,
         ecmaFeatures: {
           jsx: true,
         },
-        // typescript-eslint specific options
+        ecmaVersion: 2018,
+        project: resolveTSConfig(),
+        sourceType: 'module',
         warnOnUnsupportedTypeScriptVersion: true,
       },
       plugins: ['@typescript-eslint'],
       rules: {},
     },
   ],
+  rules: {},
 };

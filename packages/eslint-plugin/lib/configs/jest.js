@@ -16,24 +16,20 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview The config for ESLint to lint test specs that uses `jest` & `testing-library`.
  */
 
 module.exports = {
   env: {
-    jest: true
+    jest: true,
   },
-  plugins: ['@wso2', 'jest', 'testing-library'],
   overrides: [
     {
-      files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
       env: {
         'jest/globals': true,
       },
-      // A subset of the recommended rules:
+      files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
       rules: {
         // https://github.com/jest-community/eslint-plugin-jest
         'jest/no-conditional-expect': 'error',
@@ -69,4 +65,5 @@ module.exports = {
       },
     },
   ],
+  plugins: ['@wso2', 'jest', 'testing-library'],
 };

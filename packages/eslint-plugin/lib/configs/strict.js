@@ -16,17 +16,11 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview The strict config for WSO2 ESLint config.
  */
 
 module.exports = {
-  rules: {
-    // Explicit return types are only needed for typescript files.
-    '@typescript-eslint/explicit-function-return-type': 'off',
-  },
   overrides: [
     {
       files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
@@ -52,4 +46,8 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    // Explicit return types are only needed for typescript files.
+    '@typescript-eslint/explicit-function-return-type': 'off',
+  },
 };

@@ -16,29 +16,19 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview ESLint config to be used in JavaScript based projects.
  */
 
 module.exports = {
-  extends: [
-    'plugin:@wso2/core',
-    'airbnb-base',
-  ],
+  extends: ['plugin:@wso2/core', 'airbnb-base'],
   rules: {
     // Allow dev dependencies to be used in test specs and storybook files.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: [
-          '**/*.test.?(j|t)s',
-          '**/*.spec.?(j|t)s',
-          '**/*.stories.?(j|t)s?(x)',
-          '**/*.stories.mdx',
-        ],
+        devDependencies: ['**/*.test.?(j|t)s', '**/*.spec.?(j|t)s', '**/*.stories.?(j|t)s?(x)', '**/*.stories.mdx'],
       },
     ],
     // Bit harsh rule, some developers will like to have consistent exports in a module.
@@ -47,10 +37,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     // Enforces sorting object properties in alphabetical order for readability.
     // https://eslint.org/docs/latest/rules/sort-keys
-    'sort-keys': [
-      'error',
-      'asc',
-      { caseSensitive: true, natural: false, minKeys: 2 },
-    ],
-  }
+    'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}],
+  },
 };

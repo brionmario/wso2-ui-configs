@@ -16,8 +16,6 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview The recommended config for WSO2 ESLint config.
  */

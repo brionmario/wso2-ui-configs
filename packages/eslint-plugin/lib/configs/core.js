@@ -16,24 +16,22 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview The usual bare minimum for ESLint to be configured are defined here.
  */
 
 module.exports = {
-  root: true,
-  parser: '@babel/eslint-parser',
-  plugins: ['@wso2'],
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     node: true,
   },
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: 'module',
     requireConfigFile: false,
+    sourceType: 'module',
   },
+  plugins: ['@wso2'],
+  root: true,
 };

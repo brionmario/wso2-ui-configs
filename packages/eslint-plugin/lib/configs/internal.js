@@ -16,8 +16,6 @@
  * under the License.
  */
 
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 
@@ -47,8 +45,7 @@ const getLicenseHeaderPattern = () => {
   const LICENSE_HEADER_DEFAULT_PATTERN = [
     '*',
     {
-      pattern:
-        ' Copyright \\(c\\) \\d{4}, WSO2 LLC. \\(https://www.wso2.com\\). All Rights Reserved.',
+      pattern: ' Copyright \\(c\\) \\d{4}, WSO2 LLC. \\(https://www.wso2.com\\). All Rights Reserved.',
       template: ` * Copyright (c) ${new Date().getFullYear()}, WSO2 LLC. (https://www.wso2.com). All Rights Reserved.`,
     },
     ' *',
@@ -68,24 +65,19 @@ const getLicenseHeaderPattern = () => {
     ' ',
   ];
 
-  if (
-    !fs.existsSync(
-      path.resolve(__dirname, LICENSE_HEADER_PATTERN_OVERRIDE_FILE_NAME)
-    )
-  ) {
+  if (!fs.existsSync(path.resolve(__dirname, LICENSE_HEADER_PATTERN_OVERRIDE_FILE_NAME))) {
     return LICENSE_HEADER_DEFAULT_PATTERN;
   }
 
-  return require(path.resolve(
-    __dirname,
-    LICENSE_HEADER_PATTERN_OVERRIDE_FILE_NAME
-  ));
+  // eslint-disable-next-line import/no-dynamic-require, global-require
+  return require(path.resolve(__dirname, LICENSE_HEADER_PATTERN_OVERRIDE_FILE_NAME));
 };
 
 module.exports = {
+  plugins: ['header'],
   rules: {
     // Enforce WSO2 license header on files.
     // https://github.com/Stuk/eslint-plugin-header
     'header/header': ['warn', 'block', getLicenseHeaderPattern()],
-  }
+  },
 };
