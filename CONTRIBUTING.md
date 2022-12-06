@@ -3,22 +3,106 @@
 We would love for you to contribute to WSO2 UI Configs and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
- - [Code of Conduct](#coc)
- - [Question or Problem?](#question)
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
- - [Coding Rules](#rules)
- - [Commit Message Guidelines](#commit)
- - [Signing the CLA](#cla)
+ - [Setting Up Development Environment](#setting-up-development-environment)
+ - [Commit Message Guidelines](#commit-message-guidelines)
 
-To ensure consistency throughout the source code, keep these rules in mind as you are working:
+## Setting Up Development Environment
 
-* All features or bug fixes **must be tested** by one or more specs (unit-tests).
-* All public API methods **must be documented**.
-* Checked in code is free of any code smells or formatting errors.
+Follow this guide to set up the source code, development tools & other software.
 
-## <a name="commit"></a> Commit Message Format
+* [Mandatory Software & Tools](#mandatory-software-and-tools)
+* [Setting up Development Tools](#setting-up-development-tools)
+* [Setting up the Source Code](#setting-up-the-source-code)
+
+### Mandatory Software & Tools
+
+To build and write code, make sure you have the following set of tools on your local environment.
+
+
+#### [Git](https://git-scm.com/downloads)
+
+* Description 🗒️ : Open source distributed version control system.
+* Download Link 🔗 : [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+#### [NodeJS](https://nodejs.org/en/download/)
+
+* Description 🗒️ : JavaScript runtime.
+* Version: LTS (Latest Stable Version)
+
+    > **Warning**
+    > This project requires atleast NodeJS **v14.6.x** or above to work.
+* Download Link 🔗 : [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+#### [pnpm](https://pnpm.io)
+
+* Description 🗒️ : Fast, disk space efficient package manager.
+* Version: Latest (**v7.9.5** or higher)
+* Download Link 🔗 : [https://pnpm.io/installation](https://pnpm.io/installation)
+
+### Setting up Development Tools
+
+These developer tools will help you to have a better developer experience since they'll help with debugging code, etc.
+
+#### ESLint
+
+* Type 🧰 : IDE Extension
+* Description 🗒️ : Static code analysis tool for JavaScript. 
+* Download Links 🔗
+    * [Download for Webstorm](https://www.jetbrains.com/help/webstorm/eslint.html)
+    * [Download for VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+#### ShellCheck
+
+* Type 🧰 : IDE Extension
+* Description 🗒️ : A shell script static analysis tool. Used by our static analyzer PR check. 
+* Download Links 🔗
+    * [ShellCheck Core](https://github.com/koalaman/shellcheck#installing)
+    * [Download for VS Code](https://github.com/vscode-shellcheck/vscode-shellcheck)
+
+#### NX Console
+
+* Type 🧰 : IDE Extension
+* Description 🗒️ : Wrapper around NX commands so you don't have to memorize. 
+* Download Links 🔗
+    * [Download for VS Code](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
+    * [Download for Web Storm](https://plugins.jetbrains.com/plugin/15000-nx-webstorm)
+
+### Setting up the Source Code
+
+#### Fork the repo
+
+1. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the repository.
+2. Clone your fork to the local machine.
+
+Replace `<github username>` with your own username.
+
+```shell
+git clone https://github.com/<github username>/wso2-ui-configs.git
+```
+
+3. Set the original repo as the upstream remote.
+
+```shell
+git remote add upstream https://github.com/wso2/wso2-ui-configs.git
+```
+
+#### Install the dependencies
+
+From the root of the project, execute the following command to install the project dependencies with `pnpm`.
+
+```shell
+pnpm install
+```
+
+#### Build the project
+
+From the root of the project, execute the following command to build the project.
+
+```shell
+pnpm build
+```
+
+## Commit Message Guidelines
 
 *This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
 
@@ -26,7 +110,6 @@ We have very precise rules over how our Git commit messages must be formatted.
 This format leads to **easier to read commit history**.
 
 Each commit message consists of a **header**, a **body**, and a **footer**.
-
 
 ```
 <header>
@@ -78,9 +161,9 @@ The scope should be the name of the npm package affected (as perceived by the pe
 
 The following is the list of supported scopes:
 
-* `primitives`
-* `scss`
-* `react`
+* `eslint` - Changes to the `@wso2/eslint-plugin` package.
+* `prettier` - Changes to the `@wso2/prettier-config` package.
+* `stylelint` - Changes to the `@wso2/stylelint-config` package.
 
 There are currently a few exceptions to the "use package name" rule:
 
@@ -88,14 +171,11 @@ There are currently a few exceptions to the "use package name" rule:
 
 * `changelog`: used for updating the release notes in CHANGELOG.md
 
-* `dev-infra`: used for dev-infra related changes within the directories /scripts and /tools
+* `dev-infra`: used for dev-infra related changes within the directories like /scripts.
 
-* `docs-infra`: used for docs-app (angular.io) related changes within the /aio directory of the repo
+* `docs-infra`: used for docs page changes. (`<ROOT>/docs`)
 
-* `migrations`: used for changes to the `ng update` migrations.
-
-* none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g. `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g. `docs: fix typo in tutorial`).
-
+* none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g. `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g. `docs: fix typo in example`).
 
 ##### Summary
 
@@ -105,14 +185,12 @@ Use the summary field to provide a succinct description of the change:
 * don't capitalize the first letter
 * no dot (.) at the end
 
-
 #### <a name="commit-body"></a>Commit Message Body
 
 Just as in the summary, use the imperative, present tense: "fix" not "fixed" nor "fixes".
 
 Explain the motivation for the change in the commit message body. This commit message should explain _why_ you are making the change.
 You can include a comparison of the previous behavior with the new behavior in order to illustrate the impact of the change.
-
 
 #### <a name="commit-footer"></a>Commit Message Footer
 
@@ -143,7 +221,6 @@ Breaking Change section should start with the phrase "BREAKING CHANGE: " followe
 
 Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated, a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
 
-
 ### Revert commits
 
 If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit.
@@ -152,16 +229,3 @@ The content of the commit message body should contain:
 
 - information about the SHA of the commit being reverted in the following format: `This reverts commit <SHA>`,
 - a clear description of the reason for reverting the commit message.
-
-
-## <a name="cla"></a> Signing the CLA
-
-Please sign our Contributor License Agreement (CLA) before sending pull requests. For any code
-changes to be accepted, the CLA must be signed. It's a quick process, we promise!
-
-* Sign here -> [CLA form](https://cla-assistant.io/wso2/ui-configs).
-
-If you have more than one GitHub accounts, or multiple email addresses associated with a single GitHub account, you must sign the CLA using the primary email address of the GitHub account used to author Git commits and send pull requests.
-
-
-[commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#

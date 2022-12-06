@@ -1,6 +1,6 @@
 # `@wso2/stylelint-config`
 
-Shareable Stylelint configurations &amp; used in WSO2 code bases.
+Shareable Stylelint configurations used in WSO2 code bases.
 
 ## Installation
 

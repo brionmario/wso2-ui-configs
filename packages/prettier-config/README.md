@@ -1,6 +1,6 @@
 # `@wso2/prettier-config`
 
-Shareable Prettier configurations &amp; used in WSO2 code bases.
+Shareable Prettier configurations used in WSO2 code bases.
 
 ## Installation
 

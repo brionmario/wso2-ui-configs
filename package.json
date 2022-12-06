@@ -22,7 +22,10 @@
     "@wso2/prettier-config": "./packages/prettier-config",
     "@wso2/stylelint-config": "./packages/stylelint-config"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many --target=build --parallel",
+    "lint": "nx run-many --target=lint --parallel"
+  },
   "dependencies": {},
   "devDependencies": {
     "nx": "15.2.1",
