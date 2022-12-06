@@ -1,22 +1,20 @@
-'use strict';
-
 module.exports = {
-  root: true,
+  env: {
+    node: true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:eslint-plugin/recommended',
     'plugin:node/recommended',
     require.resolve('./lib/configs/javascript'),
   ],
-  env: {
-    node: true,
-  },
   overrides: [
     {
-      files: ['lib/**/__tests__/**/*.js'],
       env: { mocha: true },
+      files: ['lib/**/__tests__/**/*.js'],
     },
   ],
+  root: true,
   rules: {
     'node/no-unpublished-require': [
       'error',
