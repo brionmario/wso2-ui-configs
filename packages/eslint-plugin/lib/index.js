@@ -25,4 +25,14 @@ module.exports.processors = {
   // add your processors here
 };
 
-module.exports.configs = requireIndex(__dirname + "/configs");
+// module.exports.configs = requireIndex(__dirname + "/configs");
+module.exports.configs = {
+  core: require('./configs/core'),
+  internal: require('./configs/internal'),
+  javascript: require('./configs/javascript'),
+  jest: require('./configs/jest'),
+  prettier: require('./configs/prettier'),
+  react: require('./configs/react'),
+  strict: require('./configs/strict'),
+  typescript: require('./configs/typescript')
+};
