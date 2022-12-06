@@ -33,7 +33,7 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   root: true,
   parser: '@babel/eslint-parser',
-  plugins: ['@wso2'],
+  plugins: ['wso2'],
   env: {
     browser: true,
     commonjs: true,

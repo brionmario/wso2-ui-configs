@@ -33,7 +33,7 @@ const tsConfig = fs.existsSync('tsconfig.json')
     : undefined;
 
 module.exports = {
-  extends: ['plugin:@wso2/javascript'],
+  extends: ['plugin:wso2/javascript'],
   rules: {},
   overrides: [
     {

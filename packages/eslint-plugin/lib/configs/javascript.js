@@ -24,7 +24,7 @@
 
 module.exports = {
   extends: [
-    'plugin:@wso2/core',
+    'plugin:wso2/core',
     'airbnb-base',
   ],
   rules: {
