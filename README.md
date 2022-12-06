@@ -27,9 +27,9 @@ This repository contains the source code of the different configurations that ar
 - [`@wso2/eslint-plugin`](./packages/eslint-plugin/) - Shareable ESLint configurations & rules used in WSO2 code bases
 - [`@wso2/prettier-config`](./packages/prettier-config/) - Shareable Prettier configurations used in WSO2 code bases
 - [`@wso2/stylelint-config`](./packages/stylelint-config/) - Shareable Stylelint configurations used in WSO2 code bases
-- @wso2/typescript-config[TODO 🦄] - Shareable TSConfig presets to be used in WSO2 code bases
-- @wso2/jest-preset[TODO 🦄] - Shareable Jest presets to be used in WSO2 code bases
-- @wso2/postcss-config[TODO 🦄] - Shareable PostCSS config to be used in WSO2 code bases
+- `@wso2/typescript-config` [TODO 🦄] - Shareable TSConfig presets to be used in WSO2 code bases
+- `@wso2/jest-preset` [TODO 🦄] - Shareable Jest presets to be used in WSO2 code bases
+- `@wso2/postcss-config` [TODO 🦄] - Shareable PostCSS config to be used in WSO2 code bases
 
 ## Contributing
 
