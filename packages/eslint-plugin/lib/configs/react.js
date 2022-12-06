@@ -24,7 +24,7 @@
 
 module.exports = {
   extends: ['airbnb'],
-  plugins: ['wso2'],
+  plugins: ['@wso2'],
   rules: {
     // We need prop spreading when writing wrapper components.
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md

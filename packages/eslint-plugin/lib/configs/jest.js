@@ -34,7 +34,7 @@ module.exports = {
   env: {
     jest: true
   },
-  plugins: ['wso2', 'jest', 'testing-library'],
+  plugins: ['@wso2', 'jest', 'testing-library'],
   overrides: [
     {
       files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
