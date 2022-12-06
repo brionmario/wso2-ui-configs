@@ -1,6 +1,6 @@
-# @wso2/eslint-plugin
+# `@wso2/eslint-plugin`
 
-Shareable ESLint configurations &amp; rules used in WSO2 code bases.
+ESLint plugin containing configurations & custom rules used in WSO2 code bases.
 
 ## Installation
 
@@ -45,8 +45,6 @@ yard add --dev @wso2/eslint-plugin
 ```
 
 ## Usage
-
-WSO2’s ESLint configs come bundled in this package. In order to use them, you simply extend the relevant configuration in your project’s `.eslintrc`.
 
 ### For JavaScript projects
 
