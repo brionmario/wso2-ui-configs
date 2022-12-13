@@ -28,7 +28,7 @@
   "dependencies": {},
   "devDependencies": {
     "@wso2/prettier-config": "*",
-    "nx": "15.2.1",
+    "nx": "15.3.3",
     "prettier": "^2.6.2"
   },
   "engines": {

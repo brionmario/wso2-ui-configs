@@ -5,11 +5,11 @@ importers:
   .:
     specifiers:
       '@wso2/prettier-config': '*'
-      nx: 15.2.1
+      nx: 15.3.3
       prettier: ^2.6.2
     devDependencies:
       '@wso2/prettier-config': link:packages/prettier-config
-      nx: 15.2.1
+      nx: 15.3.3
       prettier: 2.8.0
 
   packages/eslint-plugin:
@@ -428,21 +428,21 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nrwl/cli/15.2.1:
-    resolution: {integrity: sha512-ufBJ5o3WCixdp6/TPkpn4rH3QBFJcqCMG1d14A/SvAkEnXu3vWlj3E+4GXf3CK+sGNjjf3ZGoNm7OFV+/Ml4GA==}
+  /@nrwl/cli/15.3.3:
+    resolution: {integrity: sha512-ZWTmVP9H3ukppWWGaS/s3Nym2nOYgnt6eHtuUFNsroz8LesG5oFAJviOz9jDEM/b+pLIrvYfU5aAGZqrtM3Z2A==}
     dependencies:
-      nx: 15.2.1
+      nx: 15.3.3
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
       - debug
     dev: true
 
-  /@nrwl/tao/15.2.1:
-    resolution: {integrity: sha512-6ApglWKORasLhtjlJmqo2co/UexSSiD7mWVxT2886oKG2Y/T/5RnPFNhJgGnKJIURCNMxiSKhq7GAA+CE9zRZg==}
+  /@nrwl/tao/15.3.3:
+    resolution: {integrity: sha512-f9+VwhlJ/7TWpjHSgoUOAA067uP9DmzABMY9HC5OREEDaCx+rzYEvbLAPv6cXzWw+6IYM6cyKw0zWSQrdEVrWg==}
     hasBin: true
     dependencies:
-      nx: 15.2.1
+      nx: 15.3.3
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -2496,8 +2496,8 @@ packages:
       path-key: 3.1.1
     dev: true
 
-  /nx/15.2.1:
-    resolution: {integrity: sha512-vVeT5D02cDDiSmS3P2Bos/waYQa3m0yl/rouzsKpusVSmzAQGQbKXhxPb4WnNIj8Iz/8KjFeBM/RZO021BtGNg==}
+  /nx/15.3.3:
+    resolution: {integrity: sha512-yR102AlVW5Sb7X1e9cyR+0h44RD6c3eLJbAZ0yVFKPCKw+zQTdGvAqITtB6ZeFnPkg6Qq6f1oWu6G0n6f2cTpw==}
     hasBin: true
     requiresBuild: true
     peerDependencies:
@@ -2509,8 +2509,8 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@nrwl/cli': 15.2.1
-      '@nrwl/tao': 15.2.1
+      '@nrwl/cli': 15.3.3
+      '@nrwl/tao': 15.3.3
       '@parcel/watcher': 2.0.4
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.31
