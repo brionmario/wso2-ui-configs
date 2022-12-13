@@ -22,6 +22,8 @@
     "directory": "packages/eslint-plugin"
   },
   "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,cjs,css,json,md,mdx,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
     "lint": "eslint .",
     "test": "mocha ./**/*.test.js --recursive"
   },
