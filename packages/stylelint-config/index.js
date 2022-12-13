@@ -16,15 +16,13 @@
  * under the License.
  */
 
-'use strict';
-
 /**
  * @fileoverview Entry point for the Prettier config.
  */
 
- module.exports = {
-  extends: [
-    'stylelint-config-standard'
-  ],
+module.exports = {
+  // TODO: Check the syntax here. We can import and pass here IMO.
+  // eslint-disable-next-line global-require
   customSyntax: require('postcss-scss'),
+  extends: ['stylelint-config-standard'],
 };

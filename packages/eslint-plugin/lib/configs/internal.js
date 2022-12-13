@@ -78,6 +78,6 @@ module.exports = {
   rules: {
     // Enforce WSO2 license header on files.
     // https://github.com/Stuk/eslint-plugin-header
-    'header/header': ['warn', 'block', getLicenseHeaderPattern()],
+    'header/header': ['warn', 'block', getLicenseHeaderPattern(), 2],
   },
 };
