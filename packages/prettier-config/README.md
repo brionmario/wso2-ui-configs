@@ -54,4 +54,5 @@ You can extend the `@wso2/prettier-config` in your preferred configuration file 
 module.exports = require('@wso2/prettier-config');
 ```
 
-For more extending strategies, read the [official guide](https://prettier.io/docs/en/configuration.html#sharing-configurations).
+For more extending strategies, read the
+[official guide](https://prettier.io/docs/en/configuration.html#sharing-configurations).

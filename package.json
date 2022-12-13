@@ -17,20 +17,17 @@
     "type": "git",
     "url": "https://github.com/wso2/ui-configs"
   },
-  "exports": {
-    "@wso2/eslint-config": "./packages/eslint-config",
-    "@wso2/prettier-config": "./packages/prettier-config",
-    "@wso2/stylelint-config": "./packages/stylelint-config"
-  },
   "scripts": {
     "build": "nx run-many --target=build --parallel",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
     "lint": "nx run-many --target=lint --parallel",
     "test": "nx run-many --target=test --parallel",
     "typecheck": "nx run-many --target=typecheck --parallel"
   },
   "dependencies": {},
   "devDependencies": {
+    "@wso2/prettier-config": "*",
     "nx": "15.2.1",
     "prettier": "^2.6.2"
   },

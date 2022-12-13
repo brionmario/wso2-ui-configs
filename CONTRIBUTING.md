@@ -1,7 +1,7 @@
 # Contributing to WSO2 UI Configs
 
-We would love for you to contribute to WSO2 UI Configs and help make it even better than it is today!
-As a contributor, here are the guidelines we would like you to follow:
+We would love for you to contribute to WSO2 UI Configs and help make it even better than it is today! As a contributor,
+here are the guidelines we would like you to follow:
 
 - [Setting Up Development Environment](#setting-up-development-environment)
 - [Commit Message Guidelines](#commit-message-guidelines)
@@ -28,8 +28,7 @@ To build and write code, make sure you have the following set of tools on your l
 - Description 🗒️ : JavaScript runtime.
 - Version: LTS (Latest Stable Version)
 
-  > **Warning**
-  > This project requires atleast NodeJS **v14.6.x** or above to work.
+  > **Warning** This project requires atleast NodeJS **v14.6.x** or above to work.
 
 - Download Link 🔗 : [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
@@ -106,8 +105,8 @@ pnpm build
 
 _This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format]._
 
-We have very precise rules over how our Git commit messages must be formatted.
-This format leads to **easier to read commit history**.
+We have very precise rules over how our Git commit messages must be formatted. This format leads to **easier to read
+commit history**.
 
 Each commit message consists of a **header**, a **body**, and a **footer**.
 
@@ -121,10 +120,11 @@ Each commit message consists of a **header**, a **body**, and a **footer**.
 
 The `header` is mandatory and must conform to the [Commit Message Header](#commit-header) format.
 
-The `body` is mandatory for all commits except for those of type "docs".
-When the body is present it must be at least 20 characters long and must conform to the [Commit Message Body](#commit-body) format.
+The `body` is mandatory for all commits except for those of type "docs". When the body is present it must be at least 20
+characters long and must conform to the [Commit Message Body](#commit-body) format.
 
-The `footer` is optional. The [Commit Message Footer](#commit-footer) format describes what the footer is used for and the structure it must have.
+The `footer` is optional. The [Commit Message Footer](#commit-footer) format describes what the footer is used for and
+the structure it must have.
 
 #### <a name="commit-header"></a>Commit Message Header
 
@@ -155,7 +155,8 @@ Must be one of the following:
 
 ##### Scope
 
-The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
+The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated
+from commit messages).
 
 The following is the list of supported scopes:
 
@@ -165,7 +166,8 @@ The following is the list of supported scopes:
 
 There are currently a few exceptions to the "use package name" rule:
 
-- `packaging`: used for changes that change the npm package layout in all of our packages, e.g. public path changes, package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
+- `packaging`: used for changes that change the npm package layout in all of our packages, e.g. public path changes,
+  package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
 
 - `changelog`: used for updating the release notes in CHANGELOG.md
 
@@ -173,7 +175,9 @@ There are currently a few exceptions to the "use package name" rule:
 
 - `docs-infra`: used for docs page changes. (`<ROOT>/docs`)
 
-- none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g. `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g. `docs: fix typo in example`).
+- none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g.
+  `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g.
+  `docs: fix typo in example`).
 
 ##### Summary
 
@@ -187,13 +191,14 @@ Use the summary field to provide a succinct description of the change:
 
 Just as in the summary, use the imperative, present tense: "fix" not "fixed" nor "fixes".
 
-Explain the motivation for the change in the commit message body. This commit message should explain _why_ you are making the change.
-You can include a comparison of the previous behavior with the new behavior in order to illustrate the impact of the change.
+Explain the motivation for the change in the commit message body. This commit message should explain _why_ you are
+making the change. You can include a comparison of the previous behavior with the new behavior in order to illustrate
+the impact of the change.
 
 #### <a name="commit-footer"></a>Commit Message Footer
 
-The footer can contain information about breaking changes and deprecations and is also the place to reference GitHub issues, Jira tickets, and other PRs that this commit closes or is related to.
-For example:
+The footer can contain information about breaking changes and deprecations and is also the place to reference GitHub
+issues, Jira tickets, and other PRs that this commit closes or is related to. For example:
 
 ```
 BREAKING CHANGE: <breaking change summary>
@@ -215,9 +220,11 @@ DEPRECATED: <what is deprecated>
 Closes #<pr number>
 ```
 
-Breaking Change section should start with the phrase "BREAKING CHANGE: " followed by a summary of the breaking change, a blank line, and a detailed description of the breaking change that also includes migration instructions.
+Breaking Change section should start with the phrase "BREAKING CHANGE: " followed by a summary of the breaking change, a
+blank line, and a detailed description of the breaking change that also includes migration instructions.
 
-Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated, a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
+Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated,
+a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
 
 ### Revert commits
 
