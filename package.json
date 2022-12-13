@@ -24,7 +24,9 @@
   },
   "scripts": {
     "build": "nx run-many --target=build --parallel",
-    "lint": "nx run-many --target=lint --parallel"
+    "lint": "nx run-many --target=lint --parallel",
+    "test": "nx run-many --target=test --parallel",
+    "typecheck": "nx run-many --target=typecheck --parallel"
   },
   "dependencies": {},
   "devDependencies": {
