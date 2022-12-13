@@ -21,7 +21,10 @@ module.exports = {
     'node/no-unpublished-require': [
       'error',
       {
-        allowModules: ['@rushstack/eslint-patch'],
+        allowModules: [
+          // This is located inside the mono-repo. Let's allow it.
+          '@wso2/prettier-config',
+        ],
       },
     ],
   },

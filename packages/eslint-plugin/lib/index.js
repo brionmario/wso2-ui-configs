@@ -2,12 +2,12 @@
  * @fileoverview Shareable ESLint configurations &amp; rules used in WSO2 code bases.
  * @author WSO2
  */
-'use strict';
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
+const path = require('path');
 const requireIndex = require('requireindex');
 
 //------------------------------------------------------------------------------
@@ -15,12 +15,11 @@ const requireIndex = require('requireindex');
 //------------------------------------------------------------------------------
 
 // import all rules in lib/rules
-module.exports.rules = requireIndex(__dirname + '/rules');
+module.exports.rules = requireIndex(path.join(__dirname, 'rules'));
 
 // import processors
 module.exports.processors = {
   // add your processors here
 };
 
-// module.exports.configs = requireIndex(__dirname + "/configs");
-module.exports.configs = requireIndex(__dirname + '/configs');
+module.exports.configs = requireIndex(path.join(__dirname, 'configs'));

@@ -28,7 +28,15 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.test.?(j|t)s', '**/*.spec.?(j|t)s', '**/*.stories.?(j|t)s?(x)', '**/*.stories.mdx'],
+        devDependencies: [
+          '**/*.test.?(j|t)s?(x)',
+          '**/*.spec.?(j|t)s',
+          '**/*.stories.?(j|t)s?(x)',
+          '**/*.stories.md?(x)',
+          '**/prettier.config.?(c)?(j|t)s',
+          '**/eslint.config.?(c)?(j|t)s',
+          '**/scripts/**/**',
+        ],
       },
     ],
     // Bit harsh rule, some developers will like to have consistent exports in a module.
