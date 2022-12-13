@@ -22,7 +22,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,cjs,css,json,md,mdx,yml}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
-    "lint": "eslint ."
+    "lint": "eslint . --max-warnings 0"
   },
   "peerDependencies": {
     "stylelint": ">=14.0.0",
