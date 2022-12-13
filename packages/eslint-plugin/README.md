@@ -68,7 +68,8 @@ If you're working on a TypeScript based project, do the following extension in y
 
 #### Stricter Rules
 
-If you want to enforce more stricter rules like mandating types for variables, mandating return types etc, do the following extension in your `eslint` config.
+If you want to enforce more stricter rules like mandating types for variables, mandating return types etc, do the
+following extension in your `eslint` config.
 
 ```diff
 {
@@ -107,7 +108,9 @@ If you're working on a React project, do the following extension in your `eslint
 
 #### Jest & React Testing Library.
 
-If you're working on project that uses [`Jest`](https://jestjs.io/) & [`React Testing Library`](https://testing-library.com/docs/react-testing-library/intro/) for unit testing, do the following extension in your `eslint` config.
+If you're working on project that uses [`Jest`](https://jestjs.io/) &
+[`React Testing Library`](https://testing-library.com/docs/react-testing-library/intro/) for unit testing, do the
+following extension in your `eslint` config.
 
 ```diff
 {
@@ -120,7 +123,8 @@ If you're working on project that uses [`Jest`](https://jestjs.io/) & [`React Te
 
 ### Prettier
 
-If you want to integrate the [`prettier`](https://github.com/prettier/prettier-eslint) ESLint in to your project, do the following extension in your `eslint` config.
+If you want to integrate the [`prettier`](https://github.com/prettier/prettier-eslint) ESLint in to your project, do the
+following extension in your `eslint` config.
 
 ```diff
 {

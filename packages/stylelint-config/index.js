@@ -22,9 +22,7 @@
  * @fileoverview Entry point for the Prettier config.
  */
 
- module.exports = {
-  extends: [
-    'stylelint-config-standard'
-  ],
+module.exports = {
+  extends: ['stylelint-config-standard'],
   customSyntax: require('postcss-scss'),
 };

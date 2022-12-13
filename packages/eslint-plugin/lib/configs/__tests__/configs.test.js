@@ -10,13 +10,14 @@ describe('check shareable config', () => {
     const files = new Set(
       fs
         .readdirSync(path.resolve(path.join(__dirname, '..')))
-        .map((f) => {
+        .map(f => {
           if (KNOWN_FILES_TO_IGNORE.includes(f)) {
             return undefined;
           }
 
           return path.basename(f, path.extname(f));
-        }).filter(Boolean),
+        })
+        .filter(Boolean),
     );
     assert.deepEqual(files, exportedConfigs);
   });

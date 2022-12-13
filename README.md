@@ -15,12 +15,13 @@ Shareable configurations to maintain consistency across <a href="https://wso2.co
   <br>
   <br>
 
-  🚧 This project is still a work in progress. Please do not use this in production 🚧
+🚧 This project is still a work in progress. Please do not use this in production 🚧
+
 </div>
 
 <br>
 
-This repository contains the source code of the different configurations that are used in WSO2 UI code bases. These configurations ensure that the code base maintains a consistent style guide whilst adhering to the industry best practices. 
+This repository contains the source code of the different configurations that are used in WSO2 UI code bases. These configurations ensure that the code base maintains a consistent style guide whilst adhering to the industry best practices.
 
 ## Packages
 
