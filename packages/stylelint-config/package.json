@@ -37,6 +37,10 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "devDependencies": {
+    "@wso2/eslint-plugin": "*",
+    "@wso2/prettier-config": "*",
+    "eslint": "^8.19.0",
+    "prettier": "^2.8.0",
     "stylelint": "^14.15.0"
   }
 }

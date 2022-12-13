@@ -16,13 +16,37 @@
  * under the License.
  */
 
-/**
- * @fileoverview Entry point for the Prettier config.
- */
-
 module.exports = {
-  extends: ['stylelint-config-standard'],
-  // TODO: Check the syntax here. We can import and pass here IMO.
-  // eslint-disable-next-line global-require
-  customSyntax: require('postcss-scss'),
+  env: {
+    node: true,
+  },
+  plugins: ['@wso2'],
+  extends: [
+    'eslint:recommended',
+    'plugin:eslint-plugin/recommended',
+    'plugin:node/recommended',
+    'plugin:@wso2/javascript',
+    'plugin:@wso2/react',
+    'plugin:@wso2/internal',
+    'plugin:@wso2/jest',
+    'plugin:@wso2/prettier',
+  ],
+  overrides: [
+    {
+      env: {mocha: true},
+      files: ['lib/**/__tests__/**/*.js'],
+    },
+  ],
+  root: true,
+  rules: {
+    'node/no-unpublished-require': [
+      'error',
+      {
+        allowModules: [
+          // This is located inside the mono-repo. Let's allow it.
+          '@wso2/prettier-config',
+        ],
+      },
+    ],
+  },
 };

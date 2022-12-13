@@ -68,17 +68,30 @@ importers:
       mocha: 10.1.0
 
   packages/prettier-config:
-    specifiers: {}
+    specifiers:
+      '@wso2/eslint-plugin': '*'
+      eslint: ^8.19.0
+    devDependencies:
+      '@wso2/eslint-plugin': link:../eslint-plugin
+      eslint: 8.29.0
 
   packages/stylelint-config:
     specifiers:
+      '@wso2/eslint-plugin': '*'
+      '@wso2/prettier-config': '*'
+      eslint: ^8.19.0
       postcss-scss: ^4.0.5
+      prettier: ^2.8.0
       stylelint: ^14.15.0
       stylelint-config-standard-scss: ^6.1.0
     dependencies:
       postcss-scss: 4.0.5
       stylelint-config-standard-scss: 6.1.0_stylelint@14.15.0
     devDependencies:
+      '@wso2/eslint-plugin': link:../eslint-plugin
+      '@wso2/prettier-config': link:../prettier-config
+      eslint: 8.29.0
+      prettier: 2.8.0
       stylelint: 14.15.0
 
 packages:
