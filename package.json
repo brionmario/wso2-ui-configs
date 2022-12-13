@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "nx run-many --target=build --parallel",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,cjs,css,json,md,mdx,yml}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
     "lint": "nx run-many --target=lint --parallel",
     "test": "nx run-many --target=test --parallel",

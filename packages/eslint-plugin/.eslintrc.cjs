@@ -12,7 +12,7 @@ module.exports = {
   ],
   overrides: [
     {
-      env: { mocha: true },
+      env: {mocha: true},
       files: ['lib/**/__tests__/**/*.js'],
     },
   ],
