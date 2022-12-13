@@ -11,6 +11,7 @@ Shareable configurations to maintain consistency across <a href="https://wso2.co
   <a href="https://stackoverflow.com/questions/tagged/wso2is"><img src="https://img.shields.io/badge/Ask%20for%20help%20on-Stackoverflow-orange" alt="Stackoverflow"></a>
   <a href="https://discord.gg/wso2"><img src="https://img.shields.io/badge/Join%20us%20on-Discord-%23e01563.svg" alt="Discord"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
+  <a href="https://github.com/brionmario/wso2-ui-configs/actions/workflows/build.yml"><img src="https://github.com/brionmario/wso2-ui-configs/actions/workflows/build.yml/badge.svg" alt="🐳 Build"></a>
 
   <br>
   <br>
