@@ -3,8 +3,6 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:eslint-plugin/recommended',
     'plugin:node/recommended',
     require.resolve('./lib/configs/javascript'),
     require.resolve('./lib/configs/internal'),

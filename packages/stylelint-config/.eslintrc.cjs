@@ -2,14 +2,11 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ['@wso2'],
   extends: [
-    'eslint:recommended',
-    'plugin:eslint-plugin/recommended',
     'plugin:node/recommended',
     'plugin:@wso2/javascript',
-    'plugin:@wso2/react',
     'plugin:@wso2/internal',
+    'plugin:@wso2/strict',
     'plugin:@wso2/jest',
     'plugin:@wso2/prettier',
   ],
@@ -19,6 +16,7 @@ module.exports = {
       files: ['lib/**/__tests__/**/*.js'],
     },
   ],
+  plugins: ['@wso2'],
   root: true,
   rules: {
     'node/no-unpublished-require': [
