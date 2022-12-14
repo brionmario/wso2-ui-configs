@@ -21,10 +21,9 @@
  */
 
 module.exports = {
-  extends: ['airbnb', 'plugin:@wso2/javascript'],
+  extends: ['airbnb', 'airbnb-typescript', 'plugin:@wso2/javascript', 'plugin:@wso2/typescript'],
   overrides: [
     {
-      extends: ['airbnb-typescript', 'plugin:@wso2/typescript'],
       files: ['**/*.ts?(x)'],
       rules: {
         'react/default-props-match-prop-types': 'off',
