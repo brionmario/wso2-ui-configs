@@ -11,16 +11,20 @@ Shareable configurations to maintain consistency across <a href="https://wso2.co
   <a href="https://stackoverflow.com/questions/tagged/wso2is"><img src="https://img.shields.io/badge/Ask%20for%20help%20on-Stackoverflow-orange" alt="Stackoverflow"></a>
   <a href="https://discord.gg/wso2"><img src="https://img.shields.io/badge/Join%20us%20on-Discord-%23e01563.svg" alt="Discord"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
+  <a href="https://github.com/brionmario/wso2-ui-configs/actions/workflows/build.yml"><img src="https://github.com/brionmario/wso2-ui-configs/actions/workflows/build.yml/badge.svg" alt="🐳 Build"></a>
 
   <br>
   <br>
 
-  🚧 This project is still a work in progress. Please do not use this in production 🚧
+🚧 This project is still a work in progress. Please do not use this in production 🚧
+
 </div>
 
 <br>
 
-This repository contains the source code of the different configurations that are used in WSO2 UI code bases. These configurations ensure that the code base maintains a consistent style guide whilst adhering to the industry best practices. 
+This repository contains the source code of the different configurations that are used in WSO2 UI code bases. These
+configurations ensure that the code base maintains a consistent style guide whilst adhering to the industry best
+practices.
 
 ## Packages
 
@@ -39,4 +43,5 @@ Excellent! Read up on our [guidelines for contributing](./CONTRIBUTING.md) to ge
 
 ## License
 
-Licenses this source under the Apache License, Version 2.0 [LICENSE](./LICENSE), You may not use this file except in compliance with the License.
+Licenses this source under the Apache License, Version 2.0 [LICENSE](./LICENSE), You may not use this file except in
+compliance with the License.

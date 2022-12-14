@@ -23,14 +23,9 @@
 module.exports = {
   extends: ['plugin:@wso2/core', 'airbnb-base'],
   rules: {
-    // Allow dev dependencies to be used in test specs and storybook files.
+    // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/*.test.?(j|t)s', '**/*.spec.?(j|t)s', '**/*.stories.?(j|t)s?(x)', '**/*.stories.mdx'],
-      },
-    ],
+    'import/no-extraneous-dependencies': 'off',
     // Bit harsh rule, some developers will like to have consistent exports in a module.
     // If there are a mixture of export types, the imports will look ugly.
     // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md

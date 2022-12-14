@@ -49,5 +49,21 @@ module.exports = {
   rules: {
     // Explicit return types are only needed for typescript files.
     '@typescript-eslint/explicit-function-return-type': 'off',
+    // Allow dev dependencies to be used in test specs and storybook files.
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.?(j|t)s?(x)',
+          '**/*.spec.?(j|t)s',
+          '**/*.stories.?(j|t)s?(x)',
+          '**/*.stories.md?(x)',
+          '**/prettier.config.?(c)?(j|t)s',
+          '**/eslint.config.?(c)?(j|t)s',
+          '**/scripts/**/**',
+        ],
+      },
+    ],
   },
 };

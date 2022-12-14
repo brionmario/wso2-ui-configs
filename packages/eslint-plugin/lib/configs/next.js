@@ -16,4 +16,13 @@
  * under the License.
  */
 
-module.exports = require('@wso2/prettier-config');
+/**
+ * @fileoverview ESLint config to be used in Next.js based projects.
+ * @see {@link https://nextjs.org/docs/basic-features/eslint#migrating-existing-config}
+ */
+
+module.exports = {
+  extends: 'plugin:@next/next/recommended',
+  plugins: ['@wso2'],
+  rules: {},
+};

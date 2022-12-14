@@ -4,10 +4,10 @@ name: 👷 PR Builder
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths-ignore:
-      - "**.md"
-      - "LICENSE"
+      - '**.md'
+      - 'LICENSE'
   workflow_dispatch:
 
 env:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ lts/* ]
+        node-version: [lts/*]
     steps:
       - name: ⬇️ Checkout
         id: checkout
@@ -38,7 +38,7 @@ jobs:
         id: set-shas
         uses: nrwl/nx-set-shas@v3
         with:
-          main-branch-name: "main"
+          main-branch-name: 'main'
 
       - name: 🥡 Setup pnpm
         id: setup-pnpm
@@ -67,14 +67,14 @@ jobs:
 
       - name: 🦄 Lint All Files
         id: lint-with-eslint
-        run: pnpm nx affected --base=${{ env.NX_BASE }} --head=${{ env.NX_HEAD }} --plain --target=lint --parallel=3
+        run: pnpm nx affected --target=lint --parallel=3 --base=${{ env.NX_BASE }} --head=${{ env.NX_HEAD }}
 
   typecheck:
     name: ʦ Typecheck (STATIC ANALYSIS)
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ lts/* ]
+        node-version: [lts/*]
     steps:
       - name: ⬇️ Checkout
         id: checkout
@@ -93,7 +93,7 @@ jobs:
         id: set-shas
         uses: nrwl/nx-set-shas@v3
         with:
-          main-branch-name: "main"
+          main-branch-name: 'main'
 
       - name: 🥡 Setup pnpm
         uses: pnpm/action-setup@v2.1.0
@@ -120,15 +120,15 @@ jobs:
         run: pnpm install
 
       - name: ☄️ Check Type Errors
-        run: pnpm nx affected --base=${{ env.NX_BASE }} --head=${{ env.NX_HEAD }} --plain --target=typecheck --parallel=3
+        run: pnpm nx affected --target=typecheck --parallel=3 --base=${{ env.NX_BASE }} --head=${{ env.NX_HEAD }}
 
   test:
     name: 👾 Unit Test (TESTING)
-    needs: [ lint, typecheck ]
+    needs: [lint, typecheck]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ lts/* ]
+        node-version: [lts/*]
     steps:
       - name: ⬇️ Checkout
         id: checkout
@@ -173,11 +173,11 @@ jobs:
 
   build:
     name: 🚧 Build
-    needs: [ lint, typecheck, test ]
+    needs: [lint, typecheck, test]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ lts/* ]
+        node-version: [lts/*]
     steps:
       - name: ⬇️ Checkout
         id: checkout

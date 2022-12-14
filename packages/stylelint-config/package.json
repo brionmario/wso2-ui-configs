@@ -19,7 +19,11 @@
     "url": "https://github.com/wso2/ui-configs",
     "directory": "packages/stylelint-config"
   },
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,cjs,css,json,md,mdx,yml}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,mdx,yml}\"",
+    "lint": "eslint . --max-warnings 0"
+  },
   "peerDependencies": {
     "stylelint": ">=14.0.0",
     "typescript": ">=4.0.0"
@@ -37,6 +41,10 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "devDependencies": {
+    "@wso2/eslint-plugin": "*",
+    "@wso2/prettier-config": "*",
+    "eslint": "^8.19.0",
+    "prettier": "^2.8.0",
     "stylelint": "^14.15.0"
   }
 }
