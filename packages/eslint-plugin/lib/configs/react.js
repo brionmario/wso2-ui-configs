@@ -38,7 +38,7 @@ module.exports = {
     'react/function-component-definition': ['error', {namedComponents: 'arrow-function'}],
     // JSX can be in `mdx` files as well.
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': ['error', {extensions: ['.jsx', '.jsx', '.mdx']}],
+    'react/jsx-filename-extension': ['error', {extensions: ['.tsx', '.jsx', '.mdx']}],
     // We need prop spreading when writing wrapper components.
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
     'react/jsx-props-no-spreading': 'off',
