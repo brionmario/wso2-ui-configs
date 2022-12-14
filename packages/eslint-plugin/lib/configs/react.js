@@ -34,6 +34,10 @@ module.exports = {
   ],
   plugins: ['@wso2'],
   rules: {
+    // Bit harsh rule, some developers will like to have consistent exports in a module.
+    // If there are a mixture of export types, the imports will look ugly.
+    // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md
+    'import/prefer-default-export': 'off',
     // We prefer to write functional components as arrow-functions.
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
     'react/function-component-definition': ['error', {namedComponents: 'arrow-function'}],
