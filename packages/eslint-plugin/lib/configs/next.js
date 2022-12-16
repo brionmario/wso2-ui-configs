@@ -22,6 +22,7 @@
  */
 
 module.exports = {
-  extends: ['plugin:@wso2/core', 'plugin:@next/next/recommended'],
+  extends: 'plugin:@next/next/recommended',
+  plugins: ['@wso2'],
   rules: {},
 };

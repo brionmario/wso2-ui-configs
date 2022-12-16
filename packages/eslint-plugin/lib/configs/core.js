@@ -16,9 +16,6 @@
  * under the License.
  */
 
-// Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 /**
  * @fileoverview The usual bare minimum for ESLint to be configured are defined here.
  */

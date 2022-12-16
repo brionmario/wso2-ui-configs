@@ -31,7 +31,6 @@
     "@babel/core": "^7.20.2",
     "@babel/eslint-parser": "^7.19.1",
     "@next/eslint-plugin-next": "^13.0.6",
-    "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint-config-airbnb": "^19.0.4",
