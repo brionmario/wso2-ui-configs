@@ -24,6 +24,7 @@ module.exports = {
   env: {
     jest: true,
   },
+  extends: ['plugin:@wso2/core'],
   overrides: [
     {
       env: {
@@ -65,5 +66,5 @@ module.exports = {
       },
     },
   ],
-  plugins: ['@wso2', 'jest', 'testing-library'],
+  plugins: ['jest', 'testing-library'],
 };
