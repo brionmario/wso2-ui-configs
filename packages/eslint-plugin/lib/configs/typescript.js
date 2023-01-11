@@ -57,5 +57,9 @@ module.exports = {
       rules: {},
     },
   ],
-  rules: {},
+  rules: {
+    // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
+    'import/no-extraneous-dependencies': 'off',
+  },
 };
