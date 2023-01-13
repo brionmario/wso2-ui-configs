@@ -39,9 +39,10 @@ const resolveTSConfig = () => {
 };
 
 module.exports = {
-  extends: ['plugin:@wso2/javascript', 'airbnb-typescript/base', 'plugin:typescript-sort-keys/recommended'],
+  extends: ['plugin:@wso2/javascript'],
   overrides: [
     {
+      extends: ['airbnb-typescript/base', 'plugin:typescript-sort-keys/recommended'],
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
