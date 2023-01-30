@@ -30,6 +30,20 @@ module.exports = {
     // If there are a mixture of export types, the imports will look ugly.
     // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md
     'import/prefer-default-export': 'off',
+    // Disallow specified names in exports.
+    // https://eslint.org/docs/rules/no-restricted-exports
+    // FIXME: In Airbnb ruleset, `default` is also restricted which disallows `export { default } from` syntax.
+    // There's a tracker (https://github.com/eslint/eslint/issues/15617) and a WIP PR to give first class support to bypass.
+    // Until then, allowing `default` syntax.
+    // Config is copied from https://github.com/airbnb/javascript/blob/f3d3a07/packages/eslint-config-airbnb-base/rules/es6.js#L65.
+    'no-restricted-exports': [
+      'error',
+      {
+        restrictedNamedExports: [
+          'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
+        ],
+      },
+    ],
     // Enforces sorting object properties in alphabetical order for readability.
     // https://eslint.org/docs/latest/rules/sort-keys
     'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}],

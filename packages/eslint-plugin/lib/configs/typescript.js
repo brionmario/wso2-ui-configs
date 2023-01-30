@@ -55,12 +55,23 @@ module.exports = {
         warnOnUnsupportedTypeScriptVersion: true,
       },
       plugins: ['@typescript-eslint'],
-      rules: {},
+      rules: {
+        // Disallow specified names in exports.
+        // https://eslint.org/docs/rules/no-restricted-exports
+        // FIXME: In Airbnb ruleset, `default` is also restricted which disallows `export { default } from` syntax.
+        // There's a tracker (https://github.com/eslint/eslint/issues/15617) and a WIP PR to give first class support to bypass.
+        // Until then, allowing `default` syntax.
+        // Config is copied from https://github.com/airbnb/javascript/blob/f3d3a07/packages/eslint-config-airbnb-base/rules/es6.js#L65.
+        'no-restricted-exports': [
+          'error',
+          {
+            restrictedNamedExports: [
+              'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
+            ],
+          },
+        ],
+      },
     },
   ],
-  rules: {
-    // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
-    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': 'off',
-  },
+  rules: {},
 };
