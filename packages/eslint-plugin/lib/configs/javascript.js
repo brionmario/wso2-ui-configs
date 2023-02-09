@@ -26,6 +26,18 @@ module.exports = {
     // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': 'off',
+    // Modify the order a bit to make the imports more readable.
+    // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+    'import/order': [
+      'warn',
+      {
+        alphabetize: {
+          caseInsensitive: true,
+          order: 'asc',
+        },
+        groups: ['builtin', 'external', 'index', 'sibling', 'parent', 'internal'],
+      },
+    ],
     // Bit harsh rule, some developers will like to have consistent exports in a module.
     // If there are a mixture of export types, the imports will look ugly.
     // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md
