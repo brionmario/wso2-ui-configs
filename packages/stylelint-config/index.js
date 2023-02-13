@@ -31,6 +31,6 @@ module.exports = {
     'custom-property-pattern': '^[a-z]+(-[a-zA-Z0-9]+)*$',
     // Some UI frameworks have CSS classes that starts with upper case letters. ex: MuiSelect
     // https://stylelint.io/user-guide/rules/selector-class-pattern/
-    'selector-class-pattern': '^[a-zA-Z]+([-][a-zA-Z]+)*$',
+    'selector-class-pattern': '^[a-zA-Z0-9]+([a-zA-Z0-9-_]+)*$',
   },
 };
