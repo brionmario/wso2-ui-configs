@@ -25,4 +25,12 @@ module.exports = {
   // eslint-disable-next-line global-require
   customSyntax: require('postcss-scss'),
   extends: ['stylelint-config-standard'],
+  rules: {
+    // CSS custom properties can have upper case letters. ex: var(--foo-borderRadius)
+    // https://stylelint.io/user-guide/rules/custom-property-pattern/
+    'custom-property-pattern': '^[a-z]+(-[a-zA-Z0-9]+)*$',
+    // Some UI frameworks have CSS classes that starts with upper case letters. ex: MuiSelect
+    // https://stylelint.io/user-guide/rules/selector-class-pattern/
+    'selector-class-pattern': '^[a-zA-Z]+([-][a-zA-Z]+)*$',
+  },
 };
