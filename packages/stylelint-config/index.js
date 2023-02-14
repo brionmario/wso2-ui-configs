@@ -26,6 +26,14 @@ module.exports = {
   customSyntax: require('postcss-scss'),
   extends: ['stylelint-config-standard'],
   rules: {
+    // Stylelint starts throwing errors for known sass @ selectors.
+    // https://stylelint.io/user-guide/rules/at-rule-no-unknown/
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['function', 'if', 'each', 'include', 'mixin'],
+      },
+    ],
     // CSS custom properties can have upper case letters. ex: var(--foo-borderRadius)
     // https://stylelint.io/user-guide/rules/custom-property-pattern/
     'custom-property-pattern': '^[a-z]+(-[a-zA-Z0-9]+)*$',
