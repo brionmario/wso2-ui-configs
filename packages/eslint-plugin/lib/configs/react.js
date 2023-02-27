@@ -21,7 +21,7 @@
  */
 
 module.exports = {
-  extends: ['airbnb', 'airbnb-typescript', 'plugin:@wso2/javascript', 'plugin:@wso2/typescript'],
+  extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'plugin:@wso2/javascript', 'plugin:@wso2/typescript'],
   overrides: [
     {
       files: ['**/*.ts?(x)'],
