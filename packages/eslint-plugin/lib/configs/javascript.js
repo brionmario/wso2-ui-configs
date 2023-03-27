@@ -23,6 +23,13 @@
 module.exports = {
   extends: ['plugin:@wso2/core', 'airbnb-base'],
   rules: {
+    // These TS ESLit rules require `parserOptions` even for non TS files.
+    // TODO: Remove these rules once the issue is fixed.
+    '@typescript-eslint/dot-notation': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-implied-eval': 'off',
+    '@typescript-eslint/no-throw-literal': 'off',
+    '@typescript-eslint/return-await': 'off',
     // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
     'import/no-extraneous-dependencies': 'off',
@@ -58,6 +65,6 @@ module.exports = {
     ],
     // Enforces sorting object properties in alphabetical order for readability.
     // https://eslint.org/docs/latest/rules/sort-keys
-    'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}],
+    'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}]
   },
 };
