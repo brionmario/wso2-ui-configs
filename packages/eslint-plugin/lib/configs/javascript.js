@@ -65,6 +65,6 @@ module.exports = {
     ],
     // Enforces sorting object properties in alphabetical order for readability.
     // https://eslint.org/docs/latest/rules/sort-keys
-    'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}]
+    'sort-keys': ['error', 'asc', {caseSensitive: true, minKeys: 2, natural: false}],
   },
 };
