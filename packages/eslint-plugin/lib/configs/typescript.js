@@ -56,6 +56,16 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
       rules: {
+        // TODO: Find a proper fix: ESLint seem to be breaking when this rule is enabled.
+        // Getting a ``TypeError: Cannot read properties of undefined (reading 'length') Occurred.
+        '@typescript-eslint/dot-notation': 'off',
+        // TODO: Find a proper fix: ESLint seem to be breaking when this rule is enabled.
+        // Getting a ``TypeError: Cannot read properties of undefined (reading 'length') Occurred.
+        '@typescript-eslint/no-throw-literal': 'off',
+        // TODO: Find a proper fix: ESLint seem to be breaking when this rule is enabled.
+        // Getting a ``TypeError: Cannot read properties of undefined (reading 'length') Occurred.
+        '@typescript-eslint/no-useless-constructor': 'off',
+        // Harsh rule, Dev dependencies should to be used in test specs, configs, scripts and storybook files.
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
         'import/no-extraneous-dependencies': [
           'error',
