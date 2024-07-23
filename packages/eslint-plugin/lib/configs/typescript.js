@@ -56,9 +56,22 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
       rules: {
-        // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
-        'import/no-extraneous-dependencies': 'off',
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: [
+              '**/*.config.*cjs',
+              '**/scripts/*.js',
+              '**/*.stories.*',
+              '**/*.test.*',
+              '**/*.spec.*',
+              '**/__tests__/**',
+              '**/__mocks__/**',
+              'test-configs/**',
+            ],
+          },
+        ],
         // Disallow specified names in exports.
         // https://eslint.org/docs/rules/no-restricted-exports
         // FIXME: In Airbnb ruleset, `default` is also restricted which disallows `export { default } from` syntax.
