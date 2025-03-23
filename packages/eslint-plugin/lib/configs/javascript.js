@@ -20,6 +20,8 @@
  * @fileoverview ESLint config to be used in JavaScript based projects.
  */
 
+const MAX_LINE_LENGTH = 120;
+
 module.exports = {
   extends: ['plugin:@wso2/core', 'airbnb-base'],
   rules: {
@@ -63,6 +65,20 @@ module.exports = {
     // If there are a mixture of export types, the imports will look ugly.
     // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/prefer-default-export.md
     'import/prefer-default-export': 'off',
+    // Set the `max-len` to 120 characters since `airbnb-base` uses 100 characters and our prettier config has `120`.
+    // https://eslint.org/docs/rules/max-len
+    'max-len': [
+      'error',
+      MAX_LINE_LENGTH,
+      2,
+      {
+        ignoreComments: false,
+        ignoreRegExpLiterals: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreUrls: true,
+      },
+    ],
     // Disallow specified names in exports.
     // https://eslint.org/docs/rules/no-restricted-exports
     // FIXME: In Airbnb ruleset, `default` is also restricted which disallows `export { default } from` syntax.
