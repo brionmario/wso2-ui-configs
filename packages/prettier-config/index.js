@@ -20,6 +20,8 @@
  * @fileoverview Entry point for the Prettier config.
  */
 
+const MAX_LINE_LENGTH = 120;
+
 module.exports = {
   arrowParens: 'avoid',
   bracketSpacing: false,
@@ -29,7 +31,7 @@ module.exports = {
   insertPragma: false,
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 120,
+  printWidth: MAX_LINE_LENGTH,
   proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
