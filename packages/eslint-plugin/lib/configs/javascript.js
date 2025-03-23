@@ -30,9 +30,23 @@ module.exports = {
     '@typescript-eslint/no-implied-eval': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
     '@typescript-eslint/return-await': 'off',
-    // This is a stricter rule. We can move it to the `strict` config and allow known places where dev-dependencies would be imported.
+    // Harsh rule, Dev dependencies should to be used in test specs, configs, scripts and storybook files.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.config.*', // Match config files in JS, TS, CJS, and MJS
+          '**/scripts/*.{js,ts,cjs,mjs}', // Match script files in JS and TS
+          '**/*.stories.*', // Storybook files
+          '**/*.test.*', // Test files in JS and TS
+          '**/*.spec.*', // Spec files in JS and TS
+          '**/__tests__/**', // Test directories
+          '**/__mocks__/**', // Mock directories
+          'test-configs/**', // Test configuration files
+        ],
+      },
+    ],
     // Modify the order a bit to make the imports more readable.
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
     'import/order': [
