@@ -25,7 +25,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
-    "@wso2/eslint-plugin": "*",
+    "@wso2/eslint-plugin": "workspace:^",
     "eslint": "^8.19.0"
   },
   "peerDependencies": {
