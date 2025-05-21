@@ -93,9 +93,6 @@ importers:
         specifier: '>=4.0.0'
         version: 5.8.3
     devDependencies:
-      '@rushstack/eslint-patch':
-        specifier: ^1.11.0
-        version: 1.11.0
       '@wso2/prettier-config':
         specifier: workspace:^
         version: link:../prettier-config
@@ -318,9 +315,6 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
-
-  '@rushstack/eslint-patch@1.11.0':
-    resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -2547,8 +2541,6 @@ snapshots:
       node-gyp-build: 4.8.4
 
   '@rtsao/scc@1.1.0': {}
-
-  '@rushstack/eslint-patch@1.11.0': {}
 
   '@types/json-schema@7.0.15': {}
 
