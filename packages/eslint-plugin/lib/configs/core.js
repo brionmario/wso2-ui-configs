@@ -16,6 +16,8 @@
  * under the License.
  */
 
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 /**
  * @fileoverview The usual bare minimum for ESLint to be configured are defined here.
  */

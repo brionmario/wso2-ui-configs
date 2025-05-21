@@ -53,6 +53,7 @@
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.11.0",
     "@wso2/prettier-config": "workspace:^",
     "eslint": "^8.19.0",
     "mocha": "^10.0.0"
